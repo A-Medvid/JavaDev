@@ -1,4 +1,4 @@
-package course1.lessons;
+package hw5.course1.lessons;
 
 public class ServiceLess {
     public static int countLect = 0;

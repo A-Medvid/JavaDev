@@ -1,10 +1,12 @@
-import course1.lessons.ServiceLess;
-import course1.students.ServiceStudent;
-import course1.teachers.ServiceTeacher;
+package hw5;
 
-import static course1.lessons.ServiceLess.countLect;
-import static course1.students.ServiceStudent.countStud;
-import static course1.teachers.ServiceTeacher.countTeach;
+import hw5.course1.lessons.ServiceLess;
+import hw5.course1.students.ServiceStudent;
+import hw5.course1.teachers.ServiceTeacher;
+
+import static hw5.course1.lessons.ServiceLess.countLect;
+import static hw5.course1.students.ServiceStudent.countStud;
+import static hw5.course1.teachers.ServiceTeacher.countTeach;
 
 public class Main {
     public static void main(String[] args) {
