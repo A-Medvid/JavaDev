@@ -1,12 +1,8 @@
 package hw5;
 
 import hw5.course1.lessons.ServiceLess;
-import hw5.course1.students.ServiceStudent;
-import hw5.course1.teachers.ServiceTeacher;
 
 import static hw5.course1.lessons.ServiceLess.countLect;
-import static hw5.course1.students.ServiceStudent.countStud;
-import static hw5.course1.teachers.ServiceTeacher.countTeach;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,10 +11,6 @@ public class Main {
         ServiceLess.lectNew();
         System.out.println(countLect);
 
-        ServiceStudent.studNew();
-        System.out.println(countStud);
-
-        ServiceTeacher.teachNew();
-        System.out.println(countTeach);
+        ServiceLess.lectNew();
     }
 }
