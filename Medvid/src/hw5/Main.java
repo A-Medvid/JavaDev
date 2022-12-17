@@ -15,10 +15,7 @@ public class Main {
         ServiceLess.lectNew();
         System.out.println(countLect);
 
-        ServiceStudent.studNew();
-        System.out.println(countStud);
-
-        ServiceTeacher.teachNew();
-        System.out.println(countTeach);
+        ServiceLess.lectNew();
+        ServiceLess.lectNew();
     }
 }
