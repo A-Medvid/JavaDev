@@ -13,5 +13,7 @@ public class Main {
 
         ServiceLess.lectNew();
         ServiceLess.lectNew();
+
+        int a = 5;
     }
 }
