@@ -1,8 +1,5 @@
+/*
 package hw5;
-
-import hw5.course1.lessons.ServiceLess;
-
-import static hw5.course1.lessons.ServiceLess.countLect;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +10,5 @@ public class Main {
 
         ServiceLess.lectNew();
         ServiceLess.lectNew();
-
-        int a = 5;
     }
-}
+}*/
