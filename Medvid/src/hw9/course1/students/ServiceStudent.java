@@ -1,4 +1,4 @@
-package hw7.course1.students;
+package hw9.course1.students;
 
 public class ServiceStudent {
     public static int countStud = 0;

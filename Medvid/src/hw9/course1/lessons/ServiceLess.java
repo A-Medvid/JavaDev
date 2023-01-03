@@ -1,13 +1,16 @@
-package hw7.course1.lessons;
+package hw9.course1.lessons;
 
+import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class ServiceLess {
-    public static int rndm(int min, int max) {
+    public static int counterLecture = 0;
+
+    /*public static int rndm(int min, int max) {
         max -= min;
         return (int) (Math.random() * ++max) + min;
-    }
+    }*/
 
     public static int getI() {
         Scanner scanner = new Scanner(System.in);
@@ -24,6 +27,13 @@ public class ServiceLess {
             return getI();
         }
         return i;
+    }
+
+    public static void getListOfLectures() {
+        System.out.println("This Course contains the following lectures:");
+        for (int j = 0; j < counterLecture; j++) {
+            System.out.println("Lecture # " + RepositoryLess.lectures[j].id);
+        }
     }
 
 }

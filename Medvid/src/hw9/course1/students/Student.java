@@ -1,10 +1,10 @@
-package hw7.course1.teachers;
+package hw9.course1.students;
 
-public class Teacher {
+public class Student {
     private final int id = 1;
     public int courseId;
 
-    public Teacher(int courseId) {
+    public Student(int courseId) {
         this.courseId = courseId;
     }
 }
