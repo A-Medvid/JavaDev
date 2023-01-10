@@ -1,4 +1,4 @@
-package hw8.course1.teachers;
+package hw9.course1.teachers;
 
 public class Teacher {
     private final int id = 1;

@@ -1,4 +1,4 @@
-package hw7.course1.lessons;
+package hw9.course1.lessons;
 
 public class Lecture {
     public int id;
