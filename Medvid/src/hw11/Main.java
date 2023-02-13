@@ -1,37 +1,36 @@
-package hw10;
+package hw11;
 
-import hw10.course1.Course;
-import hw10.course1.RepositoryCourse;
-import hw10.course1.lessons.Lecture;
-import hw10.course1.lessons.RepositoryLess;
-import hw10.course1.lessons.ServiceLess;
-import hw10.course1.students.RepositoryStudent;
-import hw10.course1.students.Student;
-import hw10.course1.teachers.RepositoryTeacher;
-import hw10.course1.teachers.Teacher;
-import hw11.Role;
-import hw11.course1.Person;
+import hw11.course1.Course;
+import hw11.course1.RepositoryCourse;
+import hw11.course1.lessons.Lecture;
+import hw11.course1.lessons.RepositoryLess;
+import hw11.course1.lessons.ServiceLess;
+import hw11.course1.students.RepositoryStudent;
+import hw11.course1.students.Student;
+import hw11.course1.teachers.RepositoryTeacher;
+import hw11.course1.teachers.Teacher;
 
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person(1, 1, Role.TEACHER);
         Course course = new Course(1);
         RepositoryCourse repositoryCourse = new RepositoryCourse();
         repositoryCourse.add(course.getId() - 1, course);
+
+        Teacher teacher = new Teacher(1, course.getId(), Role.TEACHER);
+        RepositoryTeacher repositoryTeacher = new RepositoryTeacher();
+        repositoryTeacher.add(course.getId(), teacher);
+
+        Student student = new Student(course.getId());
+        RepositoryStudent repositoryStudent = new RepositoryStudent();
+        repositoryStudent.add(course.getId(), student);
+
         RepositoryLess repositoryLess = new RepositoryLess();
         for (int i = 0; i < 3; i++) {
-            Lecture lecture = new Lecture(i + 1, course.getId());
+            Lecture lecture = new Lecture(i + 1, course.getId(), teacher);
             repositoryLess.add(i, lecture);
             int sysCountLect = ServiceLess.getCounterLecture();
             ServiceLess.setCounterLecture(sysCountLect + 1);
         }
-
-        Teacher teacher = new Teacher(course.getId());
-        RepositoryTeacher repositoryTeacher = new RepositoryTeacher();
-        repositoryTeacher.add(course.getId(), teacher);
-        Student student = new Student(course.getId());
-        RepositoryStudent repositoryStudent = new RepositoryStudent();
-        repositoryStudent.add(course.getId(), student);
 
         while (course.getId() != 0) {
             System.out.println("Choose the category");
@@ -81,7 +80,7 @@ public class Main {
                 case 5:
                     int sysCountLect = ServiceLess.getCounterLecture();
                     ServiceLess.setCounterLecture(sysCountLect + 1);
-                    Lecture lecture1 = new Lecture(ServiceLess.getCounterLecture(), course.getId());
+                    Lecture lecture1 = new Lecture(ServiceLess.getCounterLecture(), course.getId(), teacher);
                     repositoryLess.add(ServiceLess.getCounterLecture() - 1, lecture1);
                     System.out.println("You`ve created Lecture number " + lecture1.getId() + ".");
                     System.out.println("Total amount of lectures is " + ServiceLess.getCounterLecture() + ".");
