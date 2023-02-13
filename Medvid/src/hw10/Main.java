@@ -9,12 +9,9 @@ import hw10.course1.students.RepositoryStudent;
 import hw10.course1.students.Student;
 import hw10.course1.teachers.RepositoryTeacher;
 import hw10.course1.teachers.Teacher;
-import hw11.Role;
-import hw11.course1.Person;
 
 public class Main {
     public static void main(String[] args) {
-        Person person = new Person(1, 1, Role.TEACHER);
         Course course = new Course(1);
         RepositoryCourse repositoryCourse = new RepositoryCourse();
         repositoryCourse.add(course.getId() - 1, course);
